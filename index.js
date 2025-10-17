@@ -138,7 +138,7 @@ const updateBookQuery = `
 })
 
 // Delete Book API 
-app.delete("books/:bookId",async(request,response)=>{
+app.delete("/books/:bookId",async(request,response)=>{
     let {bookId}=request.params;
     const deleteSqlQuery = `
     DELETE FROM
@@ -149,3 +149,4 @@ app.delete("books/:bookId",async(request,response)=>{
     console.log('Yes')  ;
     response.send(`Book Deleted successfully`);                     
 })
+
